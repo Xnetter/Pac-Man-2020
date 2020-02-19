@@ -1,60 +1,76 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+
 
 public class Controller : MonoBehaviour
 {
     //Quaternions won't be used in the final product. Quick and dirty, but needs to be organized.
     //Feel free to do so.
-    public Rigidbody2D character;
-    public bool freeMovement;
-    public float speed;
-    private Vector2 moveVelocity;
-    private Vector2 moveInput;
     private int facing = 1; // 0 = left, 1 = right, 2 = down, 3 = up;
+    
+    const float PM_Collider_Radius = 0.09f;
+    
+
+    private GameObject pacMan;
+    private GameObject maze;
+    public Rigidbody2D pacManRB;
+    private CircleCollider2D pacManCollider;
+    private Movements pacManRBMovement; 
+
+    
     
     // Start is called before the first frame update
     void Start()
     {
-        character = GetComponent<Rigidbody2D>();
-        character.gravityScale = 0;
-        character.transform.position = new Vector2(-0.46f, 1.6f);
+
+        pacMan = GameObject.FindGameObjectWithTag("PacMan");
+        maze = GameObject.FindGameObjectWithTag("Maze");
+        pacManRB = pacMan.GetComponent<Rigidbody2D>(); // has to be initialized in Start()
+        Debug.Log("hy: " + pacManRB.ToString());
+        pacManCollider= pacMan.GetComponent<CircleCollider2D>();
+        pacManRB.position = new Vector2(-0.497f, 1.504f);
+        pacManRBMovement = new Movements(new Vector2(-1f, 0), 0.1f, maze);
+        pacManCollider.radius = PM_Collider_Radius;
+        pacManRB.gravityScale = 0;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        bool validMove = CanMove(moveInput);
-        if (!moveInput.Equals(new Vector2(0,0)) && !freeMovement && validMove) // Constantly Apply Velocity Vector
-        {
-            moveVelocity = moveInput.normalized * speed;
-            Flip(moveVelocity); //Rotate.
+    {   
+        pacManRBMovement.SetDirection(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), pacManRB.position, pacManCollider.radius);
+        // CanMove(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), pacManRB.position);
+            Flip(pacManRBMovement.GetDirection()); 
+
+
+        void OnTriggerEnter2D(Collider2D col){
+            // if(the collided object == pacMan){
+            //     pacManRBMovement.SetValidDirections(col.validDirections);
+            // }
         }
-        else if (freeMovement) //Only apply while key is pressed.
-        {
-            moveVelocity = moveInput.normalized * speed;
+
+        void OnCollisionExit(Collider2D col) {
+
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-         character.MovePosition(character.position + moveVelocity * Time.deltaTime);
+        pacManRB.MovePosition(pacManRB.position + pacManRBMovement.GetVelocity() * Time.deltaTime);
     }
-    
-    private bool CanMove(Vector2 direction)// Raycast to detect collisions between pac-man and environment.
-    {
-        Vector2 position = character.transform.position;
-        RaycastHit2D probe = Physics2D.Linecast(position + direction, position);
-        Debug.Log(probe.collider == GetComponent<Collider2D>());
-        return probe.collider == GetComponent<Collider2D>();
-    }
+
+// private bool CanMove(Vector2 direction, Vector2 position)    // Raycast to detect collisions between pac-man and environment.
+//     {
+//         RaycastHit2D probe = Physics2D.Linecast(position + direction, position);
+//         Debug.Log("hey: " + probe.collider.ToString());
+//         return probe.collider == GetComponent<Collider2D>();
+        
+//     }
 
 
     //Rotations upon velocity change, using 0-3 as Pac Man's directions.
     void Flip(Vector2 direction) // We are using Quaternions as a very temporary solution -- later, we will use animation frames instead of actually modifying the transform.
     {
-        Quaternion rotater = character.transform.localRotation;
+        Quaternion rotater = pacManRB.transform.localRotation;
         switch (direction.normalized.x) // Using the unit vector so I can switch on exact cases.
         {     
             case -1: // velocity is to the left
@@ -88,6 +104,6 @@ public class Controller : MonoBehaviour
                 }
                 break;
         }
-        character.transform.localRotation = rotater;
+        pacManRB.transform.localRotation = rotater;
     }
 }
