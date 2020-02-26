@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 
 public class Controller : MonoBehaviour
@@ -8,14 +7,14 @@ public class Controller : MonoBehaviour
     //Feel free to do so.
     private int facing = 1; // 0 = left, 1 = right, 2 = down, 3 = up;
     
-    const float PM_Collider_Radius = 0.09f;
+    const float PM_Collider_Radius = 0.49f;
     
 
     private GameObject pacMan;
     private GameObject maze;
-    public Rigidbody2D pacManRB;
+    private Rigidbody2D pacManRB;
     private CircleCollider2D pacManCollider;
-    private Movements pacManRBMovement; 
+    private Movements pacManRBMovement = new Movements(); 
 
     
     
@@ -24,12 +23,11 @@ public class Controller : MonoBehaviour
     {
 
         pacMan = GameObject.FindGameObjectWithTag("PacMan");
-        maze = GameObject.FindGameObjectWithTag("Maze");
+        maze = GameObject.FindGameObjectWithTag("Wall");
         pacManRB = pacMan.GetComponent<Rigidbody2D>(); // has to be initialized in Start()
-        Debug.Log("hy: " + pacManRB.ToString());
         pacManCollider= pacMan.GetComponent<CircleCollider2D>();
         pacManRB.position = new Vector2(-0.497f, 1.504f);
-        pacManRBMovement = new Movements(new Vector2(-1f, 0), 0.1f, maze);
+        pacManRBMovement = new Movements(new Vector2(-1f, 0), 0.9f);
         pacManCollider.radius = PM_Collider_Radius;
         pacManRB.gravityScale = 0;
     }
@@ -37,34 +35,35 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        pacManRBMovement.SetDirection(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), pacManRB.position, pacManCollider.radius);
+        pacManRBMovement.SetDirection(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
         // CanMove(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), pacManRB.position);
             Flip(pacManRBMovement.GetDirection()); 
 
-
-        void OnTriggerEnter2D(Collider2D col){
-            // if(the collided object == pacMan){
-            //     pacManRBMovement.SetValidDirections(col.validDirections);
-            // }
-        }
-
-        void OnCollisionExit(Collider2D col) {
-
-        }
+       
     }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        
+        if(col.name == "point"){
+            pacManRBMovement.Turn();
+        }else{
+            pacManRBMovement.SetInIntersection(true);
+            pacManRBMovement.EnterIntersection(col);
+        }
+            
+    }
+    void OnTriggerExit2D()
+    {
+        pacManRBMovement.SetInIntersection(false);
+        pacManRBMovement.ExitIntersection();
+    }
+
 
     void FixedUpdate()
     {
         pacManRB.MovePosition(pacManRB.position + pacManRBMovement.GetVelocity() * Time.deltaTime);
     }
 
-// private bool CanMove(Vector2 direction, Vector2 position)    // Raycast to detect collisions between pac-man and environment.
-//     {
-//         RaycastHit2D probe = Physics2D.Linecast(position + direction, position);
-//         Debug.Log("hey: " + probe.collider.ToString());
-//         return probe.collider == GetComponent<Collider2D>();
-        
-//     }
 
 
     //Rotations upon velocity change, using 0-3 as Pac Man's directions.
