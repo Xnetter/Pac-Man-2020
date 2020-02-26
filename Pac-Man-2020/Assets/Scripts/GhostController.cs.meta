@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Pac-Man-2020/Assets/Scripts/Physics/PhysicsValidDirections.cs.meta
-guid: da2b33e822fdd4f0eaf9dd876336c779
-=======
 guid: c2d302085f7f944bdaa7a431adbbcfc4
->>>>>>> master:Pac-Man-2020/Assets/Scripts/GhostController.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

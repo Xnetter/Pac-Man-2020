@@ -21,7 +21,7 @@ public class Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
         pacMan = GameObject.FindGameObjectWithTag("PacMan");
         maze = GameObject.FindGameObjectWithTag("Wall");
         pacManRB = pacMan.GetComponent<Rigidbody2D>(); // has to be initialized in Start()
