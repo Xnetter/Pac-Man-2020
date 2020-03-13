@@ -121,4 +121,9 @@ public class PacManController : ControllerNodes
     {
         GameObject.Find("Game").GetComponent<gameBoard>().Die();
     }
+
+    public Direction getFacing()
+    {
+        return facing;
+    }
 }
