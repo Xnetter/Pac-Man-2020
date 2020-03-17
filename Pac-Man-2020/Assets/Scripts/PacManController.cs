@@ -124,7 +124,8 @@ public class PacManController : ControllerNodes
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject.Find("Game").GetComponent<gameBoard>().Die();
+        //GameObject.Find("Game").GetComponent<gameBoard>().Die();
+        GetComponent<Animator>().SetTrigger("die");
     }
 
     public Direction getFacing()

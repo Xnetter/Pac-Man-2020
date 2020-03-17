@@ -37,6 +37,7 @@ public class ScoreObject : MonoBehaviour
             score = 0;
             UpdateScore(score);
         } else {
+            Debug.Log("Hitting Score WIth " + score);
             for(int i = 0; i < arrayOfNum.Length; i++){
                 int y = int.Parse(arrayOfNum[i].ToString()); //break apart and update score with loop
                 places[i].SetActive(true); //turn on number place
