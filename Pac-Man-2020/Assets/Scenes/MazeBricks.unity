@@ -4361,6 +4361,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ghost
       objectReference: {fileID: 0}
+    - target: {fileID: 6591487974774634580, guid: 619413b1f16e340e59f24a73572d92af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6591487974774634584, guid: 619413b1f16e340e59f24a73572d92af,
         type: 3}
       propertyPath: m_Sprite
@@ -13092,7 +13097,7 @@ PrefabInstance:
     - target: {fileID: 2409492246630471977, guid: e0ec03e50f03940b58f1f1a219e09efa,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2409492246630471977, guid: e0ec03e50f03940b58f1f1a219e09efa,
         type: 3}

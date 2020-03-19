@@ -236,9 +236,9 @@ public class GhostController : ControllerNodes
 
         //Now use pacPosPlusTwo and redPos to find and assign target
 
-        target = new Vector2(2 * (pacPosPlusTwo.x - redPos.x) , 2 * (pacPosPlusTwo.y - redPos.y)); //target is double the vector from red to pac+2 (vector algebra)
+        target = (2 * (pacPosPlusTwo - redPos)); //target is double the vector from red to pac+2 (vector algebra)
 
-        shortestPathTo(targetPosition: target); //now that inky has his target position, just take the shortest path to it. 
+        shortestPathTo(target); //now that inky has his target position, just take the shortest path to it. 
     }
 
 
