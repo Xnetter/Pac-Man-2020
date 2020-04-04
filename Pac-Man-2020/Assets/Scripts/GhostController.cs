@@ -25,6 +25,16 @@ public class GhostController : ControllerNodes
     private bool needNewTarget = true;
     // I am also using isChasing property for Bashful
 
+    private enum Mode
+    {
+        Scatter,
+        Chase,
+        Frightened,
+        Consumed
+    }
+
+    private Mode currentMode;
+
     // Time before ghosts leave jail;
     private float redStartDelay = 0f;
     private float orangeStartDelay = 5f;
@@ -47,6 +57,7 @@ public class GhostController : ControllerNodes
         Pink //leaves fourth
     }
     private Vector2[] startPositions = { new Vector2(10, 12), new Vector2(11, 10), new Vector2(10, 10), new Vector2(9,10)};//Corresponding Start Pos for ghost color.
+    public Node ghostHouse;
     public GhostColor identity = GhostColor.Blue; //Which ghost is this?
     private float releaseTimer = 0f;
     private float behaviorTimer = 0f;
@@ -122,6 +133,13 @@ public class GhostController : ControllerNodes
         {
             currentNode = current;
         }
+
+        currentMode = Mode.Chase;
+    }
+
+    bool checkIfInGhostHouse()
+    {
+        return transform.position == ghostHouse.transform.position;
     }
 
     public override void Update() //Override to change behavior
@@ -136,7 +154,7 @@ public class GhostController : ControllerNodes
 
         chaseOrFlee();//Are we chasing or fleeing? Choose to chase or flee using configuration at top of file. 
 
-        if(!canLeave) //Don't release if we already can leave (efficiency check only).
+        if (!canLeave) //Don't release if we already can leave (efficiency check only).
             releaseGhosts();
         else
         {
@@ -149,19 +167,21 @@ public class GhostController : ControllerNodes
                 else if (identity == GhostColor.Blue)
                     doubleRedtoPacPlusTwo();
                 else
-                    randomInput();
+                    BashfulAI();
             }
             else if (!isScared) //Otherwise, "Scatter" or chase home base.
                 shortestPathTo(objectName: myHomeBase);
             else
                 randomInput();
         }
-
         if (canLeave) //Don't leave unless your release timer is up.
             Move();
 
         UpdateOrientation();
     }
+
+
+
 
     private void releaseGhosts()
     {
@@ -177,8 +197,6 @@ public class GhostController : ControllerNodes
 
         if(getNodeAtPosition(transform.position) != null) //run only if on a node
         {
-
-
             float minDistance = 9999; //initialize minDistance to a random big value that's greater than any ghost-pacman distance possible
             Vector2 tempDirection = Vector2.zero; //initialize the direction vector the ghost will take
             Node currentPosition = getNodeAtPosition(transform.position); //get current position to then find my neighbors
@@ -191,6 +209,14 @@ public class GhostController : ControllerNodes
                     continue;
                 }
 
+                if (!returningHome)
+                {
+                    GameObject tile = GetTileAtPosition(currentPosition.transform.position);//possibly redundant function
+                    if (tile.GetComponent<Pills>().isJailEntrance && currentPosition.validDir[i] == Vector2.down)
+                    {
+                        continue;
+                    }
+                }
                 Node neighborNode = myNeighbors[i];
 
                 Vector2 nodePos = neighborNode.transform.position; //get the coordinates of the node
@@ -227,7 +253,14 @@ public class GhostController : ControllerNodes
                 {
                     continue;
                 }
-
+                if (!returningHome)
+                {
+                    GameObject tile = GetTileAtPosition(currentPosition.transform.position);//possibly redundant function
+                    if (tile.GetComponent<Pills>().isJailEntrance && currentPosition.validDir[i] == Vector2.down)
+                    {
+                        continue;
+                    }
+                }
                 Node neighborNode = myNeighbors[i];
 
                 Vector2 nodePos = neighborNode.transform.position; //get the coordinates of the node
@@ -298,6 +331,15 @@ public class GhostController : ControllerNodes
                 if (direction * (-1) == currentPosition.validDir[i]) //Mate must document
                 {
                     continue;
+                }
+
+                if (!returningHome)
+                {
+                    GameObject tile = GetTileAtPosition(currentPosition.transform.position);//possibly redundant function
+                    if (tile.GetComponent<Pills>().isJailEntrance && currentPosition.validDir[i] == Vector2.down)
+                    {
+                        continue;
+                    }
                 }
 
                 Node neighborNode = myNeighbors[i];
@@ -378,7 +420,7 @@ private bool b = true;
 
     private void Scared()//Might need to extract this to the gameboard class so that transitions are instantaneous.
     {
-        if (scaredTimer > 0 && scaredTimer <= frightTime)
+        if (isScared)
         {
             animator.SetBool("frightened", true);
             if(scaredTimer >= blinkAtTime)
@@ -425,10 +467,20 @@ private bool b = true;
 
     }
     
+    GameObject getTileAtPosition(Vector2 pos)
+    {
+        int tileX = Mathf.RoundToInt(pos.x);
+        int tileY = Mathf.RoundToInt(pos.y);
 
+        GameObject tile = GameObject.Find("Game").GetComponent<gameBoard>().board[tileX, tileY];
+
+        if (tile != null)
+            return tile;
+        return null;
+    }
     private void chaseOrFlee()
     {
-        if (!isScared)
+        if (currentMode == Mode.Chase)
         {
             if (chaseIteration >= numberOfChaseIterations)
                 isChasing = true;
@@ -448,6 +500,21 @@ private bool b = true;
         {
             isChasing = false;
         }
+    }
+
+    void Respawn()
+    {
+        canLeave = false;
+        Node current = getNodeAtPosition(transform.position);//Get node at this position.
+        if (current != null)
+        {
+            currentNode = current;
+        }
+        animator.SetBool("frightened", false);
+        animator.SetBool("blink", false);
+        //returningHome = false;
+        behaviorTimer = 0f;
+        isScared = false;
     }
 
 }

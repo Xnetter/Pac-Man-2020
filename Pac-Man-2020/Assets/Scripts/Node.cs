@@ -6,7 +6,7 @@ public class Node : MonoBehaviour
 {
     public Node[] neighbors;
     public Vector2[] validDir;
-    public bool isEntryNode; //Determines if a node is an entrance to jail.
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,6 @@ public class Node : MonoBehaviour
         {
             Node neighbor = neighbors[i];
             validDir[i] = (neighbor.transform.localPosition - transform.localPosition).normalized;
-
         }
     }
 }

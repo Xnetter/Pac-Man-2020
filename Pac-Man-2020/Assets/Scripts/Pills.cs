@@ -9,6 +9,7 @@ public class Pills : MonoBehaviour
     public bool isPellet;
     public bool isLargePellet;
     private bool consumed;
+    public bool isJailEntrance;
 
     public GameObject portalReceiver;
 

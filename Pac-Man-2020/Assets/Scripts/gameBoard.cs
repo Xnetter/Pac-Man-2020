@@ -256,9 +256,14 @@ public class gameBoard : MonoBehaviour
     private void Update()
     {
         //Handle Fright Mode outside of GhostController Class
-        if (GhostController.IsScared)
-            GhostController.ScaredTimer += Time.deltaTime;
+        if (GhostController.ScaredTimer >= GhostController.frightTime)
+        {
+            GhostController.IsScared = false;
+            GhostController.ScaredTimer = 0;
+        }
         else
-            GhostController.ScaredTimer = 0f;
+        {
+            GhostController.ScaredTimer += Time.deltaTime;
+        }
     }
 }
