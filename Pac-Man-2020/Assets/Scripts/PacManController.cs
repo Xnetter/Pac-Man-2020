@@ -128,6 +128,31 @@ public class PacManController : ControllerNodes
         }
     }
 
+    void ConsumeBonusItem()
+        {                
+       //  Pills points = GameObject.Find("bonus_items").GetComponent<Pills>(); //gets pill information
+        
+       // if (points.currentLifeTime < points.randomLifeExpectancy) {
+           //    points.currentLifeTime += Time.deltaTime;
+
+
+         if (transform.position == GameObject.Find("bonus_items").transform.position)
+            {  
+               // if (points.currentLifeTime < points.randomLifeExpectancy) {
+               // points.currentLifeTime += Time.deltaTime;
+                Debug.Log("Entering Consume If Statement");    
+                GameObject.Find("bonus_items").GetComponent<SpriteRenderer>().enabled = false;
+                gameBoard game = GameObject.Find("bonus_items").GetComponent<gameBoard>();//get the game state
+                game.score();//score
+                game.munch();
+                
+                }
+            }  
+
+
+
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Animator>().GetBool("frightened"))
