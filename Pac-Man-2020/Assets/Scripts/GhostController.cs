@@ -10,7 +10,7 @@ public class GhostController : ControllerNodes
     public int frightSpeed;
     private static bool isScared = false;
     private bool currentlyScared = false;
-    public static float frightTime= 5f;
+    public static float frightTime = 5f;
     private static float blinkForSeconds = 1.5f;//How long the ghost should blink for at the end of its fright duration. Cannot be greater than or equal to frighttime.
     private static float scaredTimer = 0f;
     private bool isConsumed = false;
@@ -88,7 +88,6 @@ public class GhostController : ControllerNodes
 
     public override void refresh()
     {
-        GetComponent<CircleCollider2D>().enabled = true;
         isConsumed = false;
         base.refresh();
         resetRelease();
@@ -531,7 +530,6 @@ public class GhostController : ControllerNodes
         GetComponent<Animator>().enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;
         speed = eyeSpeed;
-        
 
     }
 

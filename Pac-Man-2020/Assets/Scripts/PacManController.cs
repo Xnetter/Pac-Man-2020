@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PacManController : ControllerNodes
@@ -7,6 +8,8 @@ public class PacManController : ControllerNodes
     public bool randomMovement = false;
     private Direction facing = Direction.Left; // 0 = left, 1 = right, 2 = down, 3 = up;
     private static float BUFFER_PILL_TIME = .45f;//Amount of time each pill adds to the pill munching duration length.
+    private int ghostCounter = 1; //counts ghosts being eaten
+    private int ghostPoints = 200; //value of first ghost (goes up exp) 
 
     public override void Start()
     {
@@ -115,6 +118,13 @@ public class PacManController : ControllerNodes
                     game.munch();
                     if (tile.isLargePellet)
                     {
+                        if(GhostController.IsScared)
+                        {
+                            Debug.Log("Ghost # = " + ghostCounter);
+                        } else
+                        {
+                            ghostCounter = 1;
+                        }
                         GhostController.ScaredTimer = 0f;
                         GhostController.IsScared = true;
                     }
@@ -131,8 +141,18 @@ public class PacManController : ControllerNodes
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<Animator>().GetBool("frightened"))
+        {
+            if (ghostCounter < 5)
+            {
+                Debug.Log("The Ghost is Scared and Eaten");
+                gameBoard.points += ghostPoints * ghostCounter;
+                ghostCounter += 1;
+            } else 
+            {
+                gameBoard.points += ghostPoints * 8; //score 1600 if more than 4 ghost eaten
+            }
             collision.gameObject.GetComponent<GhostController>().Die();
-        else
+        } else
         {
             gameBoard.LifeCount--;
             GameObject.Find("Game").GetComponent<gameBoard>().Die();

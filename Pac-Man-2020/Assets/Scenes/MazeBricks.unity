@@ -1436,6 +1436,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6591487974774634580, guid: 619413b1f16e340e59f24a73572d92af,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ghost
+      objectReference: {fileID: 0}
     - target: {fileID: 6591487974774634584, guid: 619413b1f16e340e59f24a73572d92af,
         type: 3}
       propertyPath: m_Sprite
@@ -4324,6 +4329,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8925563996359968567, guid: 4d7e9083dcb21427a878d6dece2cc33f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ghost
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d7e9083dcb21427a878d6dece2cc33f, type: 3}
 --- !u!1001 &325537041
@@ -4818,12 +4828,12 @@ PrefabInstance:
     - target: {fileID: 6591487974774634591, guid: 619413b1f16e340e59f24a73572d92af,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.63
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6591487974774634591, guid: 619413b1f16e340e59f24a73572d92af,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.91
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6591487974774634591, guid: 619413b1f16e340e59f24a73572d92af,
         type: 3}
@@ -18479,8 +18489,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151314415}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.96, y: 9.5, z: 0}
-  m_LocalScale: {x: 0.8908169, y: 1.0197802, z: 1}
+  m_LocalPosition: {x: 8.96, y: 9.4873, z: 0}
+  m_LocalScale: {x: 0.8908169, y: 1.0325274, z: 1}
   m_Children: []
   m_Father: {fileID: 454881596}
   m_RootOrder: 2
@@ -37062,7 +37072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1857341710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37075,7 +37085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5221836cd23194a90a6ca173f4349f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  totalScore: 0
   oneUpScore: 0
   numbers:
   - {fileID: -2973451351822383342, guid: a70b0ce41563f47eb880d9c915c8ba0d, type: 3}
@@ -37089,19 +37099,33 @@ MonoBehaviour:
   - {fileID: -6180101023728018127, guid: a70b0ce41563f47eb880d9c915c8ba0d, type: 3}
   - {fileID: -3748392377035486473, guid: a70b0ce41563f47eb880d9c915c8ba0d, type: 3}
   places:
+  - {fileID: 1417883033}
+  - {fileID: 1375154053}
+  - {fileID: 1744783936}
+  - {fileID: 366894264}
+  - {fileID: 1170132858}
+  - {fileID: 2099959389}
+  - {fileID: 720646159}
+  - {fileID: 1011714482}
+  - {fileID: 1004771047}
+  - {fileID: 1809095958}
+  oneUpPlaces:
   - {fileID: 1829815979}
   - {fileID: 1388426856}
   - {fileID: 1188441884}
   - {fileID: 1726240128}
   - {fileID: 1463363171}
   - {fileID: 1206572900}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 720646159}
+  - {fileID: 1011714482}
+  - {fileID: 1004771047}
+  - {fileID: 1809095958}
   extraLife: 10000
   maxscore: 2147483647
   recalc: 1
+  isScore: 0
+  isOneUp: 1
+  LifeUp: 1
 --- !u!4 &1857341711
 Transform:
   m_ObjectHideFlags: 0
@@ -38347,7 +38371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1906093841
 Transform:
   m_ObjectHideFlags: 0
@@ -38384,7 +38408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5221836cd23194a90a6ca173f4349f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  totalScore: 0
   oneUpScore: 0
   numbers:
   - {fileID: -2973451351822383342, guid: a70b0ce41563f47eb880d9c915c8ba0d, type: 3}
@@ -38408,9 +38432,23 @@ MonoBehaviour:
   - {fileID: 1011714482}
   - {fileID: 1004771047}
   - {fileID: 1809095958}
+  oneUpPlaces:
+  - {fileID: 1829815979}
+  - {fileID: 1388426856}
+  - {fileID: 1188441884}
+  - {fileID: 1726240128}
+  - {fileID: 1463363171}
+  - {fileID: 1206572900}
+  - {fileID: 720646159}
+  - {fileID: 1011714482}
+  - {fileID: 1004771047}
+  - {fileID: 1809095958}
   extraLife: 10000
   maxscore: 2147483647
   recalc: 1
+  isScore: 1
+  isOneUp: 0
+  LifeUp: 0
 --- !u!1 &1911240693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8833820049369464673, guid: ea238d06b143efa409fe948bc2010854,
