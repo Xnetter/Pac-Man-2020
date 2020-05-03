@@ -53,3 +53,6 @@ TagManager:
   - name: Sprite Layer
     uniqueID: 1752805823
     locked: 0
+  - name: Transition Layer
+    uniqueID: 3124576831
+    locked: 0

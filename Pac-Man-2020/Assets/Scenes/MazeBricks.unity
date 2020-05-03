@@ -1426,6 +1426,11 @@ PrefabInstance:
       propertyPath: frightSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1544592476153357890, guid: 619413b1f16e340e59f24a73572d92af,
+        type: 3}
+      propertyPath: cruiseSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6591487974774634580, guid: 619413b1f16e340e59f24a73572d92af,
         type: 3}
       propertyPath: m_Name
@@ -4243,6 +4248,11 @@ PrefabInstance:
       propertyPath: frightSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5162795072589421491, guid: 4d7e9083dcb21427a878d6dece2cc33f,
+        type: 3}
+      propertyPath: cruiseSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8925563996359968562, guid: 4d7e9083dcb21427a878d6dece2cc33f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4559,12 +4569,12 @@ PrefabInstance:
     - target: {fileID: 774375320409627322, guid: 516da81580c8fb44b99046b18ff4514e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 9.99
       objectReference: {fileID: 0}
     - target: {fileID: 774375320409627322, guid: 516da81580c8fb44b99046b18ff4514e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 774375320409627322, guid: 516da81580c8fb44b99046b18ff4514e,
         type: 3}
@@ -4616,6 +4626,12 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3126367209715892093, guid: 516da81580c8fb44b99046b18ff4514e,
+        type: 3}
+      propertyPath: nextLevel
+      value: 
+      objectReference: {fileID: 21300000, guid: 50af7e99c93b3ed49b4be1412b36972c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 516da81580c8fb44b99046b18ff4514e, type: 3}
 --- !u!1001 &359688547
@@ -4783,6 +4799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: frightSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544592476153357890, guid: 619413b1f16e340e59f24a73572d92af,
+        type: 3}
+      propertyPath: cruiseSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6230251991966722336, guid: 619413b1f16e340e59f24a73572d92af,
         type: 3}
@@ -13544,6 +13565,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1359372209}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &796920883
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796920882}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93972d90bb20a4c62ae8d8471d9dda1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &796920884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13930,6 +13970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: frightSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909191062060680331, guid: e0ec03e50f03940b58f1f1a219e09efa,
+        type: 3}
+      propertyPath: cruiseSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2409492246630471976, guid: e0ec03e50f03940b58f1f1a219e09efa, type: 3}
@@ -17008,7 +17053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994199178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 9.46, z: -10}
+  m_LocalPosition: {x: 4.1, y: 9.46, z: -10}
   m_LocalScale: {x: 17.94389, y: 8.158101, z: 2.6423}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17582,6 +17627,25 @@ MonoBehaviour:
   isLargePellet: 1
   isJailEntrance: 0
   portalReceiver: {fileID: 0}
+--- !u!95 &1020184693
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020184689}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93972d90bb20a4c62ae8d8471d9dda1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1026397299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8833820049369464673, guid: ea238d06b143efa409fe948bc2010854,
@@ -40430,6 +40494,25 @@ MonoBehaviour:
   predecessor: {fileID: 0}
   distance: 0
   isEntryNode: 0
+--- !u!95 &2078075238
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078075236}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93972d90bb20a4c62ae8d8471d9dda1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2078075239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41632,6 +41715,25 @@ MonoBehaviour:
   isLargePellet: 1
   isJailEntrance: 0
   portalReceiver: {fileID: 0}
+--- !u!95 &2144912142
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144912139}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93972d90bb20a4c62ae8d8471d9dda1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4496438634900310684
 PrefabInstance:
   m_ObjectHideFlags: 0

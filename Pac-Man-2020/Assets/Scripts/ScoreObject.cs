@@ -44,14 +44,14 @@ public class ScoreObject : MonoBehaviour
             UpdateScore(score, targetArray);
         } else if(score < 0){ //no negative score allowed
             score = 0;
-            UpdateScore(score, targetArray);    
+            UpdateScore(score, targetArray);
 
         } else {
             for(int i = 0; i < targetArray.Length; i++){
                 int y = int.Parse(targetArray[i].ToString()); //break apart and update score with loop
                 //Debug.Log("THIS IS Y " + y);
                 places[i].SetActive(true); //turn on number place
-                places[i].GetComponent<SpriteRenderer>().sprite = numbers[y]; //turns on correct sprite number 
+                places[i].GetComponent<SpriteRenderer>().sprite = numbers[y]; //turns on correct sprite number
             }
 
             //Debug.Log("places.Length" + places.Length);

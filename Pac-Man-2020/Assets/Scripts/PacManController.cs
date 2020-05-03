@@ -7,6 +7,16 @@ public class PacManController : ControllerNodes
     public bool randomMovement = false;
     private Direction facing = Direction.Left; // 0 = left, 1 = right, 2 = down, 3 = up;
     private static float BUFFER_PILL_TIME = .45f;//Amount of time each pill adds to the pill munching duration length.
+    public int totalPellets=0;
+    //public static gameBoard instance;
+    //public int level = 1;
+    int allPellets = 20;
+    public static int cruisePellets = 140;
+
+    //private int cruiseFactor = 10 ;
+    //public int speedy = GhostController.speed;
+
+   //float Spd = GameObject.Find("Blinky").GetComponent<GhostController>().speed;
 
     public override void Start()
     {
@@ -38,7 +48,7 @@ public class PacManController : ControllerNodes
 
         Flip();//Update orientation using current direction data.
 
-        ConsumePellet();  //Run to see if pill to be consumed. 
+        ConsumePellet();  //Run to see if pill to be consumed.
 
         StopChewing();//Check if not moving to stop chewing animation.
     }
@@ -90,6 +100,11 @@ public class PacManController : ControllerNodes
             GetComponent<Animator>().enabled = false;
             GetComponent<SpriteRenderer>().sprite = idle; //Uncomment this, and set the graphic you want Pac-Man to stop on.
         }
+        /*if(totalPellets==30) {
+          GetComponent<Animator>().enabled = false;
+          GetComponent<SpriteRenderer>().sprite = nextLevel;
+        }*/
+
         else
         {
             GetComponent<Animator>().enabled = true;
@@ -113,17 +128,47 @@ public class PacManController : ControllerNodes
                     gameBoard game = temp.GetComponent<gameBoard>();//get the game state
                     game.score();//score
                     game.munch();
+
+                    totalPellets++;
+
+                    if (totalPellets == allPellets){ // allPellets = 191
+
+                      GhostController.canCruise = false;
+
+                      GetComponent<Animator>().enabled = false;
+                      GetComponent<SpriteRenderer>().sprite = nextLevel;
+
+
+                      GameObject.Find("Game").GetComponent<gameBoard>().LevelUp();
+                    }
+
+
+
+
+                  if (totalPellets == cruisePellets) { // cruisePellets = 140, after 140 pellets blinky speeds up
+                       GhostController.canCruise = true;
+                       //GhostController.cruiseElroy();
+                    }
+
                     if (tile.isLargePellet)
                     {
                         GhostController.ScaredTimer = 0f;
                         GhostController.IsScared = true;
+
                     }
+
+
+
+
+
+
                     //game.addTime(BUFFER_PILL_TIME);// WORKS AT SPEED 5 or maybe sorta (.45f*(5/speed))
                     //if (!temp.GetComponent<AudioSource>().isPlaying)
                     //{
                     //    temp.GetComponent<AudioSource>().Play();
                     //}
                 }
+
             }
         }
     }
