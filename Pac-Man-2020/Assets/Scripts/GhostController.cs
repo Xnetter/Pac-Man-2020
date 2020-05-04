@@ -42,7 +42,7 @@ public class GhostController : ControllerNodes
 
     // Dijkstra
     List<Node> nodes = new List<Node>();
-
+    
     // Time before ghosts leave jail;
     private float redStartDelay = 0f;
     private float orangeStartDelay = 5f;
@@ -53,12 +53,12 @@ public class GhostController : ControllerNodes
     private float PacPlusN = 2f; //number of pills ahead of pacman used to obtain the vector pacPosPlusN and target in the function doubleRedToPacPlusN()
     public float nAhead = 4f; //number of pills to aim ahead when using the nPillsAheadOfPacMan() decision algo
     // Bashful settings
-    private float approachableRadius = 10f; //the radius of the circle the ghost can approach pacman used in the function BashfulAI()
+    private float approachableRadius = 5f; //the radius of the circle the ghost can approach pacman used in the function BashfulAI()
     private bool isAtCorner = false;
+    private Node nextNode;
     private Vector2 nextNodePos;
-    Node[] cornerNodes = new Node[4];
+    List<Node> cornerNodes = new List<Node>();
     private bool needNewTarget = true;
-    GameObject[] go = new GameObject[4];
     // also using isChasing property for Bashful
 
 
@@ -98,59 +98,46 @@ public class GhostController : ControllerNodes
         base.refresh();
         resetRelease();
     }
-    //Currently, Ghosts will continue behavior they were currently in upon Pac-Death (Scatter or Chase Mode)
-    public override void Start()
-    {
-        // get corner nodes for BashfulAI
-        go = GameObject.FindGameObjectsWithTag("corner");
-        speed = defaultSpeed;
 
-        for(int i = 0; i < cornerNodes.Length; i++){
-            Vector2 nodePos = go[i].transform.position;
-            cornerNodes[i] = getNodeAtPosition(nodePos);
-        }
-       // get all nodes for Dijkstra and assign it to "nodes"
+    public override void Awake(){
+        // get all nodes for Dijkstra and assign it to "nodes"
         foreach(GameObject o in GameObject.FindGameObjectsWithTag("node")){
             nodes.Add(o.GetComponent<Node>());
         }
-        foreach(GameObject o in go){
-            nodes.Add(o.GetComponent<Node>());
+        foreach(GameObject o in GameObject.FindGameObjectsWithTag("corner")){
+            nodes.Add(o.GetComponent<Node>()); // add corners to nodes
+            cornerNodes.Add(o.GetComponent<Node>()); // add corners to cornerNode
+        }
+    }
+
+    //Currently, Ghosts will continue behavior they were currently in upon Pac-Death (Scatter or Chase Mode)
+    public override void Start()
+    {
+        //Initialize, Set Home Base, and myStartDelay by Identity.
+        switch(identity){
+            case GhostColor.Red: 
+                myHomeBase = "Home Base Red";
+                myStartDelay = redStartDelay;
+                break;
+            case GhostColor.Orange: 
+                myHomeBase = "Home Base Orange";
+                myStartDelay = orangeStartDelay;
+                break;
+            case GhostColor.Blue: 
+                myHomeBase = "Home Base Blue";
+                myStartDelay = blueStartDelay;
+                break;
+            case GhostColor.Pink:
+                myHomeBase = "Home Base Pink";
+                myStartDelay = pinkStartDelay;
+                break;
+            default:
+                myHomeBase = "Home Base Red";
+                myStartDelay = redStartDelay;
+                break;
         }
 
-        //Initialize and Set Home Base by Identity.
-        if (identity == GhostColor.Blue)
-        {
-            myHomeBase = "Home Base Blue";
-        }
-        else if (identity == GhostColor.Red)
-        {
-            myHomeBase = "Home Base Red";
-        }
-        else if (identity == GhostColor.Orange)
-        {
-            myHomeBase = "Home Base Orange";
-        }
-        else
-            myHomeBase = "Home Base Pink";
-
-        //Set myStartDelay at bootup to save computation during game and make scaling other features easier.
-        if (identity == GhostColor.Blue)
-        {
-            myStartDelay = blueStartDelay;
-        }
-        else if (identity == GhostColor.Pink)
-        {
-            myStartDelay = pinkStartDelay;
-        }
-        else if (identity == GhostColor.Orange)
-        {
-            myStartDelay = orangeStartDelay;
-        }
-        else
-        {
-            myStartDelay = redStartDelay;
-        }
-
+        speed = defaultSpeed;
         startPosition = startPositions[(int)identity];//Set start position for the ghosts.
         dirNum = Direction.Right;//Reinitialize for refresh;
         this.canReverse = false;//Ghosts cannot move unless they are at an intersection.
@@ -218,15 +205,26 @@ public class GhostController : ControllerNodes
             randomInput();
         else if (isChasing) //Use preprogrammed AI if chasing.
         {
-            if (identity == GhostColor.Red)
-                //Dijkstra();
-                shortestPathTo(objectName: "Pac-Man-Node");
-            else if (identity == GhostColor.Pink)
-                nAheadOfPacMan();
-            else if (identity == GhostColor.Blue)
-                doubleRedtoPacPlusN();
-            else
-                randomInput(); //Bashful AI Allows ghosts to reenter jail. Fix and then replace here.
+            switch(identity){
+                case GhostColor.Red:
+                    shortestPathTo(objectName: "Pac-Man-Node");
+                    // Dijkstra(); // goes into the jail
+                    break;   
+                case GhostColor.Pink:
+                    nAheadOfPacMan();
+                    break;
+                case GhostColor.Blue:
+                    doubleRedtoPacPlusN();
+                    break;
+                case GhostColor.Orange:
+                    randomInput();  
+                    // BashfulAI(); // goes into the jail
+                    break;
+                default:
+                    randomInput();
+                    // BashfulAI(); // goes into the jail
+                    break;
+            }
         }
         else //Otherwise, "Scatter" or chase home base.
             shortestPathTo(objectName: myHomeBase);
@@ -315,17 +313,14 @@ public class GhostController : ControllerNodes
             for (int i = 0; i < myNeighbors.Length; i++)
             {
                 if (direction * (-1) == currentPosition.validDir[i])
-                {
                     continue;
-                }
                 if (!isConsumed)
                 {
                     GameObject tile = GetTileAtPosition(currentPosition.transform.position);
                     if (tile.GetComponent<Pills>().isJailEntrance && currentPosition.validDir[i] == Vector2.down)
-                    {
                         continue;
-                    }
                 }
+    
                 Node neighborNode = myNeighbors[i];
 
                 Vector2 nodePos = neighborNode.transform.position;
@@ -335,7 +330,6 @@ public class GhostController : ControllerNodes
                 {
                     minDistance = tempDistance;
                     tempDirection = currentPosition.validDir[i];
-
                 }
             }
             ChangePosition(tempDirection);
@@ -390,7 +384,7 @@ public class GhostController : ControllerNodes
 
             for (int i = 0; i < myNeighbors.Length; i++) //iterate over the neighbors to find the shortest one to pacman
             {
-                if (direction * (-1) == currentPosition.validDir[i]) //Mate must document
+                if (direction * (-1) == currentPosition.validDir[i]) // don't allow reverse direction
                 {
                     continue;
                 }
@@ -439,26 +433,22 @@ public class GhostController : ControllerNodes
     private void BashfulAI()
     {
         Vector2 pacPos = GameObject.FindGameObjectWithTag("PacMan").transform.position;
-        Vector2 ghostPos = transform.position;
-        Node ghostNode = getNodeAtPosition(ghostPos);
-
-        if(ghostNode != null){
-            for(int i = 0; i < cornerNodes.Length && !isAtCorner && !isChasing; i++){
-                if(cornerNodes[i] == ghostNode){
+        Node ghostNode = getNodeAtPosition(transform.position);
+        Vector2 ghostPos = ghostNode.transform.position;
+            foreach(Node node in cornerNodes){
+                if(node == ghostNode)
                     isAtCorner = true;
-                }
             }
 
-            if(isAtCorner){
+            if(isAtCorner){ // reset chasing when ghost reached the corner
                 isChasing = true;
                 isAtCorner = false;
             }
 
-            if((ghostPos - pacPos).sqrMagnitude <= approachableRadius || !isChasing){
-                print("Chase turned off");
+            if((ghostPos - pacPos).magnitude <= approachableRadius || !isChasing){
                 isChasing = false;
-                if((ghostPos - pacPos).sqrMagnitude <= approachableRadius && needNewTarget){
-                    nextNodePos = cornerNodes[(int)UnityEngine.Random.Range(0, 4)].transform.position;
+                if((ghostPos - pacPos).magnitude <= approachableRadius && needNewTarget){ // don't want to find a new target every update but rather 1 target per chase flee cycle
+                    nextNodePos = cornerNodes[(int)UnityEngine.Random.Range(0, 4)].transform.transform.position;
                     needNewTarget = false;
                 }
                 shortestPathTo(nextNodePos);
@@ -469,16 +459,17 @@ public class GhostController : ControllerNodes
                 }
                 needNewTarget = true;
             }
-        }
-
     }
 
-    private void Dijkstra(){
+    private void Dijkstra() // this algorithm shows the shortest path to pacMan
+    { 
         Node ghostNode = getNodeAtPosition(transform.position);
         if(ghostNode != null){
-            foreach(Node node in nodes){    // initialize node distance to INFINITY
+            foreach(Node node in nodes){    // initialize node distance to INFINITY and predecessor to be null
                 node.distance = 9999f;
+                node.predecessor = null;
             }
+            
             PacManController pac = GameObject.FindGameObjectWithTag("PacMan").GetComponent<PacManController>();
             HashSet<Node> visited = new HashSet<Node>();
             List<Node> priorityList = new List<Node>(); // have to sort after each insertion
@@ -491,6 +482,45 @@ public class GhostController : ControllerNodes
                 visited.Add(v); // add node to the "visited" set
                 for(int i = 0; i < v.neighbors.Length; i++){
                     Node u = v.neighbors[i];
+                    if(u.tag == "jail"){ // don't add jail nodes to the options
+                        continue;
+                    }
+                    if(!visited.Contains(u)){
+                        float thisPathLength = v.distance + v.neighborDistance[i]; // distance to parent node from origin + distance to this neighbor node
+                        if(u.distance > thisPathLength){
+                            u.distance = thisPathLength; // distance to parent node from origin + distance to this neighbor node
+                            u.predecessor = v;
+                        } 
+                        priorityList.Add(u);  
+                        priorityList.Sort((x, y) => x.distance.CompareTo(y.distance)); // sort list based on Node distance from ghost; Node with smallest distance first
+                    }
+                }  
+            }
+                    ChangePosition(findNextDirection(ghostNode, pac.GetTargetNode()));
+        }
+    }
+
+    private void DijkstraTo(Node targetNode, Node ghostNode) // this algorithm shows the shortest path to a specific node
+    { 
+        if(ghostNode != null){
+            foreach(Node node in nodes){    // initialize node distance to INFINITY
+                node.distance = 9999f;
+                node.predecessor = null;
+            }
+            HashSet<Node> visited = new HashSet<Node>();
+            List<Node> priorityList = new List<Node>(); // have to sort after each insertion
+            ghostNode.distance = 0f;
+            priorityList.Add(ghostNode);
+            while(priorityList.Count != 0){
+                
+                Node v = priorityList[0]; // retrieve Node with smallest distance property
+                priorityList.RemoveAt(0); // remove previous Node
+                visited.Add(v); // add node to the "visited" set
+                for(int i = 0; i < v.neighbors.Length; i++){
+                    Node u = v.neighbors[i];
+                    if(u.tag != "jail"){ // don't add jail nodes to the options
+                        continue;
+                    }
                     if(!visited.Contains(u)){
                         float thisPathLength = v.distance + v.neighborDistance[i]; // distance to parent node from origin + distance to this neighbor node
                         if(u.distance > thisPathLength){
@@ -502,9 +532,7 @@ public class GhostController : ControllerNodes
                     }
                 }
             }
-            ChangePosition(findNextDirection(ghostNode, pac.getTargetNode()));
-
-
+            ChangePosition(findNextDirection(ghostNode, targetNode));
         }
     }
 

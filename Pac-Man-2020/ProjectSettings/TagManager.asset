@@ -13,6 +13,7 @@ TagManager:
   - Sound
   - corner
   - node
+  - jail
   layers:
   - Default
   - TransparentFX

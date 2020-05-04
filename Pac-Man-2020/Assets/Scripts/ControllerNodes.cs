@@ -18,14 +18,16 @@ public class ControllerNodes : MonoBehaviour
     protected Node previousNode;
     protected Node targetNode;
 
-    public Node getTargetNode(){
+    public Node GetTargetNode(){
         return targetNode;
     }
-    public Node getPreviousNode(){
+    public Node GetPreviousNode(){
         return previousNode;
     }
 
     private int pelletsConsumed = 0;
+
+    public virtual void Awake(){}
 
     // Start is called before the first frame update
     public virtual void Start()
