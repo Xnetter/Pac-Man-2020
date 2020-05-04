@@ -216,13 +216,11 @@ public class GhostController : ControllerNodes
                 case GhostColor.Blue:
                     doubleRedtoPacPlusN();
                     break;
-                case GhostColor.Orange:
-                    randomInput();  
-                    // BashfulAI(); // goes into the jail
+                case GhostColor.Orange:  
+                    randomInput();
                     break;
                 default:
-                    randomInput();
-                    // BashfulAI(); // goes into the jail
+                    BashfulAI();
                     break;
             }
         }
@@ -434,7 +432,8 @@ public class GhostController : ControllerNodes
     {
         Vector2 pacPos = GameObject.FindGameObjectWithTag("PacMan").transform.position;
         Node ghostNode = getNodeAtPosition(transform.position);
-        Vector2 ghostPos = ghostNode.transform.position;
+        if(ghostNode != null){
+            Vector2 ghostPos = ghostNode.transform.position;
             foreach(Node node in cornerNodes){
                 if(node == ghostNode)
                     isAtCorner = true;
@@ -459,6 +458,7 @@ public class GhostController : ControllerNodes
                 }
                 needNewTarget = true;
             }
+        }
     }
 
     private void Dijkstra() // this algorithm shows the shortest path to pacMan
