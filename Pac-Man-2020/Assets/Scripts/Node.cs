@@ -13,13 +13,14 @@ public class Node : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        distance = 9999f; // initialize distance to INFINITY for Dijkstra
         validDir = new Vector2[neighbors.Length];
         neighborDistance = new float[neighbors.Length];
         for(int i = 0; i < neighbors.Length; i++)
         {
-            Vector2 distanceVector = neighbors[i].transform.localPosition - transform.localPosition;
+            Vector2 distanceVector = neighbors[i].transform.position - transform.position;
             validDir[i] = distanceVector.normalized;
-            neighborDistance[i] = distanceVector.sqrMagnitude;
+            neighborDistance[i] = distanceVector.magnitude;
         }
     }
 }
