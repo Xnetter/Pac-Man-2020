@@ -8,19 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-
-#   - enabled: 0
-#     path: Assets/Scenes/MazeBricks.unity
-#     guid: 841156515999a4cc0b68dec327c89169
-  - enabled: 1
-    path: Assets/Scenes/Intermission.unity
-    guid: 90a709be1978049cc876903173295528
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 0a3cae1a7440744dc8a12d55a0f2c286
   - enabled: 1
     path: Assets/Scenes/MazeBricks.unity
     guid: 841156515999a4cc0b68dec327c89169
+  - enabled: 1
+    path: Assets/Scenes/Intermission.unity
+    guid: 90a709be1978049cc876903173295528
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 398a74ec83e5f4b37894708858ed13da

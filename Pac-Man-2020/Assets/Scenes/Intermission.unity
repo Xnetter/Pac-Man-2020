@@ -10123,7 +10123,7 @@ GameObject:
   - component: {fileID: 1094741183}
   - component: {fileID: 1094741182}
   - component: {fileID: 1094741185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PacBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10184,8 +10184,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1752805823
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e827276a5a258495ab342fd6ec058a30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10239,7 +10239,7 @@ GameObject:
   - component: {fileID: 1143714683}
   - component: {fileID: 1143714682}
   - component: {fileID: 1143714685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pac-Man1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10607,7 +10607,7 @@ GameObject:
   - component: {fileID: 1423248893}
   - component: {fileID: 1423248892}
   - component: {fileID: 1423248895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RedGhostAnimation_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10722,7 +10722,7 @@ GameObject:
   - component: {fileID: 2041040844}
   - component: {fileID: 2041040843}
   - component: {fileID: 2041040846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: frightG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10783,8 +10783,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1752805823
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95f4b2a54c4a7492f82660ad4c37bca4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
