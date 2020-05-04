@@ -10,15 +10,9 @@ public class PacManController : ControllerNodes
     private static float BUFFER_PILL_TIME = .45f;//Amount of time each pill adds to the pill munching duration length.
 
     public int totalPellets=0;
-    //public static gameBoard instance;
-    //public int level = 1;
-    int allPellets = 30;
+    int allPellets = 191;
     public static int cruisePellets = 140;
     
-    //private int cruiseFactor = 10 ;
-    //public int speedy = GhostController.speed;
-
-   //float Spd = GameObject.Find("Blinky").GetComponent<GhostController>().speed;
     private int ghostCounter = 1; //counts ghosts being eaten
     private int ghostPoints = 200; //value of first ghost (goes up exp) 
 

@@ -11,6 +11,7 @@ public class gameOver : MonoBehaviour
     void Start () 
     {
         gameOverTimer = gameOverTimerLimit;
+        gameBoard.points = 0;
     }
  
     void CheckTimer ()

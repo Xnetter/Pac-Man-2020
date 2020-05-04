@@ -45,6 +45,7 @@ public class gameBoard : MonoBehaviour
     //Delay before game starts again after Pac-Man hits a ghost.
     public static int DEATH_DELAY = 5;
     public static int WAIT_DELAY = 2; //delay for death animation
+    public static int PAUSE_DELAY = 1;
 
     //Array of type GameObject initialized with board width and height
     //These are the locations that will be stored
@@ -56,7 +57,6 @@ public class gameBoard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        points = 0;
         LifeCount = 2;
         lifeAsset1 = GameObject.Find(LifeName1);
         lifeAsset2 = GameObject.Find(LifeName2);
