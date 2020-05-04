@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,8 @@ public class ControllerNodes : MonoBehaviour
     protected Vector2 direction = new Vector2(0,0);
     protected Vector2 startPosition = new Vector2(10, 4);
     protected Vector2 queuedDirection;
-    public Sprite idle; //The sprite Pac-Man lands on when he stops moving. 
+    public Sprite idle; //The sprite Pac-Man lands on when he stops moving.
+    public Sprite nextLevel;
     public float speed = 3f;
 
     protected Node currentNode;
@@ -67,12 +68,12 @@ public class ControllerNodes : MonoBehaviour
             ChangePosition(Vector2.right);
             //MoveToNode(direction);
         }
-        
+
     }
 
     public virtual void refresh()
     {
-        
+
         direction = Vector2.zero;
         queuedDirection = Vector2.zero;
         currentNode = null;
@@ -95,7 +96,7 @@ public class ControllerNodes : MonoBehaviour
         {
             if(currentNode.validDir[i] == d)
             {
-                
+
                 moveToNode = currentNode.neighbors[i];
                 break;
             }
@@ -147,7 +148,7 @@ public class ControllerNodes : MonoBehaviour
         if(targetNode != currentNode && targetNode != null)
         {
 
-            if(canReverse && queuedDirection == direction * -1) 
+            if(canReverse && queuedDirection == direction * -1)
             {
                 direction *= -1; //if quueued is inverse, invert direction
                 Node tempNode = targetNode; //switch targetNode and previousNode
@@ -236,10 +237,10 @@ public class ControllerNodes : MonoBehaviour
             if(tile.GetComponent<Pills>() !=  null){ //retrieves components of tile
                 if(tile.GetComponent<Pills>().isPortal){ //if portal
                     GameObject otherPortal = tile.GetComponent<Pills>().portalReceiver;
-                    return  otherPortal; //get components of reciever portal 
+                    return  otherPortal; //get components of reciever portal
                 }
             }
-        } 
+        }
         return null;
     }
 
@@ -251,7 +252,7 @@ public class ControllerNodes : MonoBehaviour
     public enum Direction {
         Left,
         Right,
-        Down, 
+        Down,
         Up
     }
 }
