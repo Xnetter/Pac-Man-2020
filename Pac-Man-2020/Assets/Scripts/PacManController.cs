@@ -113,11 +113,13 @@ public class PacManController : ControllerNodes
                     gameBoard game = temp.GetComponent<gameBoard>();//get the game state
                     game.score();//score
                     game.munch();
-                    if (tile.isLargePellet)
-                    {
-                        GhostController.ScaredTimer = 0f;
-                        GhostController.IsScared = true;
-                    }
+                    if (tile.isBonusItem)
+						ConsumedBonusItem (1, tile);
+                        if (tile.isLargePellet)
+                        {
+                            GhostController.ScaredTimer = 0f;
+                            GhostController.IsScared = true;
+                        }
                     //game.addTime(BUFFER_PILL_TIME);// WORKS AT SPEED 5 or maybe sorta (.45f*(5/speed))
                     //if (!temp.GetComponent<AudioSource>().isPlaying)
                     //{
@@ -128,6 +130,21 @@ public class PacManController : ControllerNodes
         }
     }
 
+
+                void ConsumedBonusItem (int playerNum, Pills bonusItem) {
+                        if (playerNum == 1) {
+                            gameBoard.playerOneScore += bonusItem.pointValue;
+
+                        } else {
+                            gameBoard.playerTwoScore += bonusItem.pointValue;
+
+                        }
+                        GameObject.Find("Game").transform.GetComponent<gameBoard> ().StartConsumedBonusItem (bonusItem.gameObject, bonusItem.pointValue); 
+
+                    }
+
+
+/*
     void ConsumeBonusItem()
         {                
        //  Pills points = GameObject.Find("bonus_items").GetComponent<Pills>(); //gets pill information
@@ -148,7 +165,7 @@ public class PacManController : ControllerNodes
                 
                 }
             }  
-
+*/
 
 
 

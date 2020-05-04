@@ -142,6 +142,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &13673701 stripped
 GameObject:
@@ -165,6 +167,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &23231079 stripped
 GameObject:
@@ -188,6 +192,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &23822392
 PrefabInstance:
@@ -581,6 +587,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &58480442 stripped
 GameObject:
@@ -628,6 +636,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &62261143 stripped
 GameObject:
@@ -651,6 +661,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &63218701 stripped
 GameObject:
@@ -674,6 +686,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &66603463 stripped
 GameObject:
@@ -697,6 +711,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &69824456 stripped
 GameObject:
@@ -744,6 +760,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &73515606 stripped
 GameObject:
@@ -767,6 +785,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &76187393
 PrefabInstance:
@@ -1099,6 +1119,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &102230366
 PrefabInstance:
@@ -1236,6 +1258,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &115473958
 PrefabInstance:
@@ -1349,6 +1373,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &121334712
 PrefabInstance:
@@ -1435,6 +1461,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591487974774634580, guid: 619413b1f16e340e59f24a73572d92af,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ghost
       objectReference: {fileID: 0}
     - target: {fileID: 6591487974774634584, guid: 619413b1f16e340e59f24a73572d92af,
         type: 3}
@@ -1617,6 +1648,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &138576993 stripped
 GameObject:
@@ -1665,6 +1698,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 1
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &140336741 stripped
 GameObject:
@@ -1688,6 +1723,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &143464338 stripped
 GameObject:
@@ -1733,6 +1770,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &145467859 stripped
 GameObject:
@@ -1756,6 +1795,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &150890580
 GameObject:
@@ -1926,6 +1967,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &163122748 stripped
 GameObject:
@@ -1971,6 +2014,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &163873599
 PrefabInstance:
@@ -2184,6 +2229,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &196107697 stripped
 GameObject:
@@ -2207,6 +2254,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &197158035
 PrefabInstance:
@@ -2410,6 +2459,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &207473941
 PrefabInstance:
@@ -2823,6 +2874,8 @@ MonoBehaviour:
   isPellet: 0
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 647655629}
 --- !u!1001 &248350282
 PrefabInstance:
@@ -3221,6 +3274,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &270968129 stripped
 GameObject:
@@ -3244,6 +3299,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &283351683
 PrefabInstance:
@@ -3357,6 +3414,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &284500751
 PrefabInstance:
@@ -3877,6 +3936,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &300109417 stripped
 GameObject:
@@ -3924,6 +3985,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &303753795
 PrefabInstance:
@@ -4076,6 +4139,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &323498440
 PrefabInstance:
@@ -4167,6 +4232,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 323498440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &323631269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323631270}
+  - component: {fileID: 323631272}
+  - component: {fileID: 323631271}
+  m_Layer: 5
+  m_Name: bonus3
+  m_TagString: UIElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &323631270
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323631269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468451862}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 309, y: 197}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &323631271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323631269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6630312321294728950, guid: f1cf280df8ba5428a8e816703de70fd6,
+    type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &323631272
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323631269}
+  m_CullTransparentMesh: 0
 --- !u!1001 &325175523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4323,6 +4462,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925563996359968567, guid: 4d7e9083dcb21427a878d6dece2cc33f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ghost
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d7e9083dcb21427a878d6dece2cc33f, type: 3}
@@ -4533,6 +4677,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &334231360
 PrefabInstance:
@@ -5000,6 +5146,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &376790727 stripped
 GameObject:
@@ -5045,6 +5193,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &386836296 stripped
 GameObject:
@@ -5092,6 +5242,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &387459306
 PrefabInstance:
@@ -5300,6 +5452,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &406693962 stripped
 GameObject:
@@ -5346,6 +5500,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 1
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &408417911
 PrefabInstance:
@@ -5437,6 +5593,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 408417911}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &410791873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410791876}
+  - component: {fileID: 410791875}
+  - component: {fileID: 410791874}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &410791874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410791873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &410791875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410791873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &410791876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410791873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411894368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8833820049369464673, guid: ea238d06b143efa409fe948bc2010854,
@@ -5459,6 +5681,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &413058882
 PrefabInstance:
@@ -5683,6 +5907,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &425817122
 PrefabInstance:
@@ -5886,6 +6112,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &447630940 stripped
 GameObject:
@@ -5933,6 +6161,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &451583055 stripped
 GameObject:
@@ -5978,7 +6208,82 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
+--- !u!1 &452312458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 452312459}
+  - component: {fileID: 452312461}
+  - component: {fileID: 452312460}
+  m_Layer: 5
+  m_Name: bonus5
+  m_TagString: UIElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &452312459
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452312458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468451862}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 309, y: -26}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &452312460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452312458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1bae867d5b6ca4510b7bd1cefe8f0e90, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &452312461
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452312458}
+  m_CullTransparentMesh: 0
 --- !u!1 &454881594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,6 +6352,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &458552211 stripped
 GameObject:
@@ -6070,7 +6377,115 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
+--- !u!1 &468451858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468451862}
+  - component: {fileID: 468451861}
+  - component: {fileID: 468451860}
+  - component: {fileID: 468451859}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &468451859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468451858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &468451860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468451858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1024, y: 768}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &468451861
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468451858}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &468451862
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468451858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 999765905}
+  - {fileID: 2071868952}
+  - {fileID: 323631270}
+  - {fileID: 1073021133}
+  - {fileID: 452312459}
+  - {fileID: 612198614}
+  - {fileID: 500177765}
+  - {fileID: 1000252329}
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &473895806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6207,6 +6622,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &481214887
 PrefabInstance:
@@ -6320,6 +6737,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &487020808
 PrefabInstance:
@@ -6411,6 +6830,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 487020808}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &500177764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500177765}
+  - component: {fileID: 500177767}
+  - component: {fileID: 500177766}
+  m_Layer: 5
+  m_Name: bonus7
+  m_TagString: UIElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &500177765
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500177764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468451862}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 312, y: -228}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &500177766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500177764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2ca429219dbbc486fb85ae73f97ca265, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &500177767
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500177764}
+  m_CullTransparentMesh: 0
 --- !u!1 &507339463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8833820049369464673, guid: ea238d06b143efa409fe948bc2010854,
@@ -6433,6 +6925,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &521581511 stripped
 GameObject:
@@ -6456,6 +6950,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &534695132
 PrefabInstance:
@@ -6695,6 +7191,8 @@ MonoBehaviour:
   isPellet: 0
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &539131894
 PrefabInstance:
@@ -6813,6 +7311,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &556343434
 PrefabInstance:
@@ -6926,6 +7426,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &561553622
 PrefabInstance:
@@ -7319,6 +7821,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &573661383 stripped
 GameObject:
@@ -7342,6 +7846,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &582780915 stripped
 GameObject:
@@ -7365,6 +7871,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &583822698 stripped
 GameObject:
@@ -7388,6 +7896,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &584725986
 PrefabInstance:
@@ -7527,6 +8037,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &609353204 stripped
 GameObject:
@@ -7550,7 +8062,82 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
+--- !u!1 &612198613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 612198614}
+  - component: {fileID: 612198616}
+  - component: {fileID: 612198615}
+  m_Layer: 5
+  m_Name: bonus6
+  m_TagString: UIElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &612198614
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612198613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468451862}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 308, y: -129}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &612198615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612198613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9bbea7ad5195b4851aeabd827275bb2a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &612198616
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612198613}
+  m_CullTransparentMesh: 0
 --- !u!1001 &620288661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10421,6 +11008,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &642224479
 PrefabInstance:
@@ -10624,6 +11213,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &647655627
 PrefabInstance:
@@ -10753,6 +11344,8 @@ MonoBehaviour:
   isPellet: 0
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 245593031}
 --- !u!114 &647655631
 MonoBehaviour:
@@ -10796,6 +11389,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &662342773
 GameObject:
@@ -11406,6 +12001,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &682640382
 PrefabInstance:
@@ -11841,6 +12438,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &695098190 stripped
 GameObject:
@@ -11864,6 +12463,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &709604523 stripped
 GameObject:
@@ -11887,6 +12488,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &720646159
 GameObject:
@@ -12092,6 +12695,8 @@ MonoBehaviour:
   isPellet: 0
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!114 &723307441
 MonoBehaviour:
@@ -12161,6 +12766,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &730309653
 PrefabInstance:
@@ -12274,6 +12881,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &732552510
 PrefabInstance:
@@ -12409,6 +13018,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &740892774
 PrefabInstance:
@@ -12941,6 +13552,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &773219956 stripped
 GameObject:
@@ -12986,6 +13599,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &776007015 stripped
 GameObject:
@@ -13009,6 +13624,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &776977612 stripped
 GameObject:
@@ -13032,6 +13649,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &784587836
 GameObject:
@@ -13537,6 +14156,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 1
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &796920882 stripped
 GameObject:
@@ -13560,6 +14181,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 1
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &802269119
 PrefabInstance:
@@ -13768,6 +14391,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &834070518
 PrefabInstance:
@@ -14433,6 +15058,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &856215462 stripped
 GameObject:
@@ -14456,6 +15083,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &857022257
 PrefabInstance:
@@ -14669,6 +15298,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &882281588 stripped
 GameObject:
@@ -14692,6 +15323,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &897663334 stripped
 GameObject:
@@ -14739,6 +15372,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &899437397 stripped
 GameObject:
@@ -14786,6 +15421,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &904769574
 PrefabInstance:
@@ -14899,6 +15536,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &908033433
 PrefabInstance:
@@ -15012,6 +15651,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &914744617 stripped
 GameObject:
@@ -15035,6 +15676,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &918355326
 PrefabInstance:
@@ -15148,6 +15791,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &925739688
 GameObject:
@@ -15779,6 +16424,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &943286739
 PrefabInstance:
@@ -15914,6 +16561,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &947369894
 PrefabInstance:
@@ -16128,6 +16777,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &980712362
 GameObject:
@@ -16165,6 +16816,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   munchSound: 1
+  totalPellets: 0
+  playerLives2: {fileID: 0}
+  playerLives3: {fileID: 0}
+  playerOneUp: {fileID: 0}
+  playerOneScoreText: {fileID: 0}
+  playerTwoScoreText: {fileID: 0}
+  consumedGhostScoreText: {fileID: 0}
+  bonusImages:
+  - {fileID: 999765906}
+  - {fileID: 2071868953}
+  - {fileID: 323631271}
+  - {fileID: 1073021134}
+  - {fileID: 452312460}
+  - {fileID: 612198615}
+  - {fileID: 500177766}
+  - {fileID: 1000252330}
 --- !u!4 &980712364
 Transform:
   m_ObjectHideFlags: 0
@@ -17014,6 +17681,152 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &999765904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999765905}
+  - component: {fileID: 999765907}
+  - component: {fileID: 999765906}
+  m_Layer: 5
+  m_Name: bonus1
+  m_TagString: UIElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &999765905
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999765904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468451862}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 306, y: 399}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &999765906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999765904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2bc65a60a7dbe420ebbbbc50ada9ae15, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &999765907
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999765904}
+  m_CullTransparentMesh: 0
+--- !u!1 &1000252328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000252329}
+  - component: {fileID: 1000252331}
+  - component: {fileID: 1000252330}
+  m_Layer: 5
+  m_Name: bonus8
+  m_TagString: UIElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1000252329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000252328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468451862}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 311, y: -330.99997}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1000252330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000252328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bc9f3b802ccc2442ebc5068b92914669, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1000252331
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000252328}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1001983290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17207,6 +18020,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1006880375 stripped
 GameObject:
@@ -17252,6 +18067,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1007961102
 PrefabInstance:
@@ -17536,6 +18353,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1020184689 stripped
 GameObject:
@@ -17581,6 +18400,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 1
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1026397299 stripped
 GameObject:
@@ -17626,6 +18447,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1029833489 stripped
 GameObject:
@@ -17649,6 +18472,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1052164460 stripped
 GameObject:
@@ -17672,6 +18497,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1060500554 stripped
 GameObject:
@@ -17695,6 +18522,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1064322342 stripped
 GameObject:
@@ -17718,6 +18547,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1065637417 stripped
 GameObject:
@@ -17741,6 +18572,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1066369906
 PrefabInstance:
@@ -17832,6 +18665,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1066369906}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1073021132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1073021133}
+  - component: {fileID: 1073021135}
+  - component: {fileID: 1073021134}
+  m_Layer: 5
+  m_Name: bonus4
+  m_TagString: UIElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1073021133
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073021132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468451862}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 308, y: 94}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1073021134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073021132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 6e8658737641c4ea7aac7598d014ecfd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1073021135
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073021132}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1076329874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17970,6 +18876,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1090096663 stripped
 GameObject:
@@ -17993,6 +18901,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1100160845
 PrefabInstance:
@@ -18201,6 +19111,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1127726467 stripped
 GameObject:
@@ -18224,6 +19136,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1134168319
 PrefabInstance:
@@ -18359,6 +19273,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1137256895 stripped
 GameObject:
@@ -18382,6 +19298,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1137420501
 PrefabInstance:
@@ -28579,6 +29497,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1159977031 stripped
 GameObject:
@@ -28624,6 +29544,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1164758137 stripped
 GameObject:
@@ -28647,6 +29569,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1166507744 stripped
 GameObject:
@@ -28670,6 +29594,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1169836324
 PrefabInstance:
@@ -29049,6 +29975,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1182543037
 PrefabInstance:
@@ -29162,6 +30090,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1186242871 stripped
 GameObject:
@@ -29185,6 +30115,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1188441884
 GameObject:
@@ -29313,6 +30245,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1191932204
 PrefabInstance:
@@ -29432,6 +30366,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1205321491 stripped
 GameObject:
@@ -29455,6 +30391,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1205909614
 PrefabInstance:
@@ -29649,6 +30587,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1224959980
 PrefabInstance:
@@ -29767,6 +30707,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1234649784
 PrefabInstance:
@@ -30155,6 +31097,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1254875002
 PrefabInstance:
@@ -30484,6 +31428,8 @@ MonoBehaviour:
   isPellet: 0
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1277077474
 PrefabInstance:
@@ -30624,6 +31570,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1297195937 stripped
 GameObject:
@@ -30647,6 +31595,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1298855567 stripped
 GameObject:
@@ -30692,6 +31642,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1306741092 stripped
 GameObject:
@@ -30715,6 +31667,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1307970781 stripped
 GameObject:
@@ -30738,6 +31692,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1314830406
 GameObject:
@@ -30793,6 +31749,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1317681476
 PrefabInstance:
@@ -31327,6 +32285,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1345197786 stripped
 GameObject:
@@ -31350,6 +32310,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1358756984
 PrefabInstance:
@@ -31650,6 +32612,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1386472388 stripped
 GameObject:
@@ -31673,6 +32637,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1387843176
 PrefabInstance:
@@ -31957,6 +32923,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1408300737 stripped
 GameObject:
@@ -31980,6 +32948,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1409980329
 PrefabInstance:
@@ -32364,6 +33334,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1432031959
 PrefabInstance:
@@ -32477,6 +33449,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1445718338
 PrefabInstance:
@@ -32590,6 +33564,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1460818806 stripped
 GameObject:
@@ -32613,6 +33589,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1461320837
 PrefabInstance:
@@ -32931,6 +33909,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1475250935
 PrefabInstance:
@@ -33049,6 +34029,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1478495352
 PrefabInstance:
@@ -33622,6 +34604,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1536344622 stripped
 GameObject:
@@ -33645,6 +34629,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1539184863 stripped
 GameObject:
@@ -33668,6 +34654,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1547056646 stripped
 GameObject:
@@ -33715,6 +34703,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1562427216 stripped
 GameObject:
@@ -33738,6 +34728,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1567595801 stripped
 GameObject:
@@ -33761,6 +34753,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1570492697 stripped
 GameObject:
@@ -33806,6 +34800,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1572853922
 PrefabInstance:
@@ -33924,6 +34920,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1579256165
 PrefabInstance:
@@ -34132,6 +35130,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1591807993 stripped
 GameObject:
@@ -34179,6 +35179,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1592554439
 PrefabInstance:
@@ -34321,6 +35323,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1602390651
 PrefabInstance:
@@ -34461,6 +35465,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1610165683
 PrefabInstance:
@@ -34596,6 +35602,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1642385752
 PrefabInstance:
@@ -34709,6 +35717,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1653967916
 PrefabInstance:
@@ -34917,6 +35927,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1664695341
 GameObject:
@@ -35110,6 +36122,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1683682544 stripped
 GameObject:
@@ -35133,6 +36147,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1683913848
 PrefabInstance:
@@ -35246,6 +36262,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1692372335 stripped
 GameObject:
@@ -35269,6 +36287,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1703596384 stripped
 GameObject:
@@ -35292,6 +36312,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1709540427
 PrefabInstance:
@@ -35521,6 +36543,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1726240128
 GameObject:
@@ -35649,6 +36673,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1736850751 stripped
 GameObject:
@@ -35672,6 +36698,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1737084261
 PrefabInstance:
@@ -35785,6 +36813,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1744783936
 GameObject:
@@ -35979,6 +37009,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1765328523
 GameObject:
@@ -36032,6 +37064,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1772409012 stripped
 GameObject:
@@ -36055,6 +37089,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1781931084
 PrefabInstance:
@@ -36168,6 +37204,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1796241967 stripped
 GameObject:
@@ -36215,6 +37253,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1809095958
 GameObject:
@@ -36955,6 +37995,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1852480545
 PrefabInstance:
@@ -37166,6 +38208,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1859538770
 PrefabInstance:
@@ -37493,6 +38537,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1879727838
 PrefabInstance:
@@ -38457,6 +39503,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1920231872 stripped
 GameObject:
@@ -38480,6 +39528,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1921271573
 PrefabInstance:
@@ -38715,6 +39765,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1935587941 stripped
 GameObject:
@@ -38738,6 +39790,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1943417217
 PrefabInstance:
@@ -38851,6 +39905,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1947569326 stripped
 GameObject:
@@ -38898,6 +39954,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1956378141 stripped
 GameObject:
@@ -38921,6 +39979,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1978515201
 GameObject:
@@ -39044,6 +40104,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &1981466837
 PrefabInstance:
@@ -39274,6 +40336,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1988855150 stripped
 GameObject:
@@ -39319,6 +40383,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1996968151 stripped
 GameObject:
@@ -39342,6 +40408,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &1999763865 stripped
 GameObject:
@@ -39387,6 +40455,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &2000484474
 PrefabInstance:
@@ -39984,6 +41054,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &2042225455
 PrefabInstance:
@@ -40192,6 +41264,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2065733191 stripped
 GameObject:
@@ -40239,6 +41313,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2066420757 stripped
 GameObject:
@@ -40288,6 +41364,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2066980470 stripped
 GameObject:
@@ -40311,6 +41389,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &2069638346
 PrefabInstance:
@@ -40402,6 +41482,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2069638346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2071868951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071868952}
+  - component: {fileID: 2071868954}
+  - component: {fileID: 2071868953}
+  m_Layer: 5
+  m_Name: bonus2
+  m_TagString: UIElements
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2071868952
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071868951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468451862}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 305, y: 296}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2071868953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071868951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 60ea2ce725da643a1837870e36aa468a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2071868954
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071868951}
+  m_CullTransparentMesh: 0
 --- !u!1 &2078075236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8833820049369464673, guid: ea238d06b143efa409fe948bc2010854,
@@ -40446,6 +41599,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 1
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2082682834 stripped
 GameObject:
@@ -40469,6 +41624,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &2092687133
 PrefabInstance:
@@ -40701,6 +41858,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2099959389
 GameObject:
@@ -40829,6 +41988,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2104377232 stripped
 GameObject:
@@ -40852,6 +42013,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2106390871 stripped
 GameObject:
@@ -40897,6 +42060,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &2107432253
 PrefabInstance:
@@ -41223,6 +42388,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2128661851 stripped
 GameObject:
@@ -41246,6 +42413,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &2130849318
 PrefabInstance:
@@ -41563,6 +42732,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2140379033 stripped
 GameObject:
@@ -41608,6 +42779,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 0
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1 &2144912139 stripped
 GameObject:
@@ -41631,6 +42804,8 @@ MonoBehaviour:
   isPellet: 1
   isLargePellet: 1
   isJailEntrance: 0
+  isBonusItem: 0
+  pointValue: 0
   portalReceiver: {fileID: 0}
 --- !u!1001 &4496438634900310684
 PrefabInstance:
