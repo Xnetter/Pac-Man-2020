@@ -41,7 +41,8 @@ public class PacManController : ControllerNodes
         ConsumePellet();  //Run to see if pill to be consumed. 
 
         StopChewing();//Check if not moving to stop chewing animation.
-    }
+
+        }
 
     void Flip() // We are using Quaternions as a very temporary solution -- later, we will use animation frames instead of actually modifying the transform.
     {
@@ -99,35 +100,57 @@ public class PacManController : ControllerNodes
     void ConsumePellet()
     {
         GameObject o = GetTileAtPosition(transform.position);  //pellet object created with correct coordinates
-
         if (o != null)
         {
             Pills tile = o.GetComponent<Pills>(); //gets pill information
             if (tile != null)
             {
-                if (!tile.Consumed && (tile.isPellet || tile.isLargePellet))
-                { //tile has visible pellet and is a pellet of some form
-                    o.GetComponent<SpriteRenderer>().enabled = false; //make oill invisible
-                    tile.Consumed = true; //update system
-                    GameObject temp = GameObject.Find("Game");//get the game object.
-                    gameBoard game = temp.GetComponent<gameBoard>();//get the game state
-                    game.score();//score
-                    game.munch();
-                    if (tile.isLargePellet)
-                    {
-                        GhostController.ScaredTimer = 0f;
-                        GhostController.IsScared = true;
+                if (gameBoard.isPlayerOneUp) {
+                    if (!tile.Consumed && (tile.isPellet || tile.isLargePellet || tile.isBonusItem))
+                    { //tile has visible pellet and is a pellet of some form
+                        o.GetComponent<SpriteRenderer>().enabled = false; //make oil invisible
+                        tile.Consumed = true; //update system
+                        GameObject temp = GameObject.Find("Game");//get the game object.
+                        gameBoard game = temp.GetComponent<gameBoard>();//get the game state
+                        game.score();//score
+                        game.munch();
+                            if (tile.isLargePellet) 
+                            {
+                                GhostController.ScaredTimer = 0f;
+                                GhostController.IsScared = true;
+                                gameBoard.playerOneScore += 50;
+                            } else {
+                                gameBoard.playerOneScore += 10;
+                                Pills.playerOnePelletsConsumed++;
+                                   }
+                             }
+                            if (tile.isBonusItem)
+                                ConsumedBonusItem(1, tile);
+
+                        //game.addTime(BUFFER_PILL_TIME);// WORKS AT SPEED 5 or maybe sorta (.45f*(5/speed))
+                        //if (!temp.GetComponent<AudioSource>().isPlaying)
+                        //{
+                        //    temp.GetComponent<AudioSource>().Play();
+                        //}
                     }
-                    //game.addTime(BUFFER_PILL_TIME);// WORKS AT SPEED 5 or maybe sorta (.45f*(5/speed))
-                    //if (!temp.GetComponent<AudioSource>().isPlaying)
-                    //{
-                    //    temp.GetComponent<AudioSource>().Play();
-                    //}
                 }
             }
         }
-    }
 
+
+
+            public void ConsumedBonusItem(int playerNum, Pills bonusItem) 
+            {
+                if (playerNum == 1) 
+                {
+                    gameBoard.playerOneScore += bonusItem.pointValue;
+                } 
+                GameObject.Find("Game").transform.GetComponent<gameBoard>().StartConsumedBonusItem(bonusItem.gameObject, bonusItem.pointValue); 
+            } 
+             
+
+
+/*
     void ConsumeBonusItem()
         {                
        //  Pills points = GameObject.Find("bonus_items").GetComponent<Pills>(); //gets pill information
@@ -148,7 +171,7 @@ public class PacManController : ControllerNodes
                 
                 }
             }  
-
+*/
 
 
 

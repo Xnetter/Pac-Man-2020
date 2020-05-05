@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class gameBoard : MonoBehaviour
@@ -36,11 +38,27 @@ public class gameBoard : MonoBehaviour
     public static int DEATH_DELAY = 5;
     public static int PAUSE_DELAY = 1; //pause when ghost hits pacman
     public static int WAIT_DELAY = 2; //delay for death animation
+    public static int playerOneLevel = 1;
+	public static int playerTwoLevel = 1;
+    public int totalPellets = 0;
+	public static int playerOneScore = 0;
+    public static bool isPlayerOneUp = true;
 
     //Array of type GameObject initialized with board width and height
     //These are the locations that will be stored
     //We are getting the positions of the game objects and then storing them at that position in this array.
     public GameObject[,] board = new GameObject[boardWidth, boardHeight];
+
+
+    //private bool didIncrementLevel = false;
+    bool didSpawnBonusItem1_player1;
+	bool didSpawnBonusItem2_player1;
+    bool didSpawnBonusItem3_player1;
+	bool didSpawnBonusItem4_player1;
+    bool didSpawnBonusItem5_player1;
+	bool didSpawnBonusItem6_player1;
+    bool didSpawnBonusItem7_player1;
+	bool didSpawnBonusItem8_player1;
 
     private bool munch1 = true;
 
@@ -60,15 +78,15 @@ public class gameBoard : MonoBehaviour
             Vector2 pos = o.transform.position; // we use "position" (instead of "localposition") which is in the global space of Unity. 
 
             //Sanity check: we only want to store the objects in the array (pills, walls, etc.) not PacMan itself. 
-            if (o.name != "Pac-Man-Node" && o.name != "Game" && o.name != "Maze" && o.name != "Pills" && o.name != "Nodes" && o.name != "Background" &&  o.name != "NonNodes" && o.name != "Overlay" && o.tag != "Ghost" && o.tag != "UI" && o.tag != "Base" && o.tag != "Sound")
+            if (o.name != "Pac-Man-Node" && o.name != "Game" && o.name != "Maze" && o.name != "Pills" && o.name != "Nodes" && o.name != "Background" &&  o.name != "NonNodes" && o.name != "Overlay" && o.tag != "Ghost" && o.tag != "UI" && o.tag != "Base" && o.tag != "Sound" && o.name != "Canvas" && o.tag != "UIElements")
 			{
-                //if (o.GetComponent<Pills>() != null) {
-                //    if (o.GetComponent<Pills>().isPellet || o.GetComponent<Pills>().isLargePellet) {
-                //        totalPellets++;
-                //    }
-                //}
+                if (o.GetComponent<Pills>() != null) {
+                    if (o.GetComponent<Pills>().isPellet || o.GetComponent<Pills>().isLargePellet) {
+                        totalPellets++;
+                       }
+                }
                 //store the object o in the board array
-               // Debug.Log("X: " + (int)pos.x + " Y: " + (int)pos.y + " " + o.name);
+                //Debug.Log("X: " + (int)pos.x + " Y: " + (int)pos.y + " " + o.name);
                 board[(int)pos.x, (int)pos.y] = o;
                 //Debug.Log(board[(int)pos.x, (int)pos.y]);
 			} else
@@ -77,7 +95,15 @@ public class gameBoard : MonoBehaviour
                 // Debug.Log("Found " + o.name + " at " + pos);
 			}
 		}
+
     }
+
+
+
+
+
+
+
     public void score()
     {
         points += MULTIPLIER;
@@ -266,6 +292,7 @@ public class gameBoard : MonoBehaviour
 
     private void Update()
     {
+		BonusItems();
 
         if(LifeCount >= 3) {
             lifeAsset2.GetComponent<SpriteRenderer>().enabled = true;
@@ -288,6 +315,97 @@ public class gameBoard : MonoBehaviour
             GhostController.IsScared = false;
         }
     }
+
+
+    void BonusItems() {
+		SpawnBonusItemForPlayer (1);
+                      }
+
+
+    void SpawnBonusItemForPlayer (int playernum) {
+		if (playernum == 1) {
+			if (Pills.playerOnePelletsConsumed >= 20 && Pills.playerOnePelletsConsumed < 40) {
+				if (!didSpawnBonusItem1_player1) {
+					didSpawnBonusItem1_player1 = true;
+					SpawnBonusItemForInterval (1);
+				    }
+			    } else if (Pills.playerOnePelletsConsumed >= 50 && Pills.playerOnePelletsConsumed < 70) {
+				if (!didSpawnBonusItem2_player1) {
+					didSpawnBonusItem2_player1 = true;
+					SpawnBonusItemForInterval (2);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 80 && Pills.playerOnePelletsConsumed < 100) {
+				if (!didSpawnBonusItem3_player1) {
+					didSpawnBonusItem3_player1 = true;
+					SpawnBonusItemForInterval (3);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 110 && Pills.playerOnePelletsConsumed < 130) {
+				if (!didSpawnBonusItem4_player1) {
+					didSpawnBonusItem4_player1 = true;
+					SpawnBonusItemForInterval (4);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 140 && Pills.playerOnePelletsConsumed < 160) {
+				if (!didSpawnBonusItem5_player1) {
+					didSpawnBonusItem5_player1 = true;
+					SpawnBonusItemForInterval (5);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 170 && Pills.playerOnePelletsConsumed < 190) {
+				if (!didSpawnBonusItem6_player1) {
+					didSpawnBonusItem6_player1 = true;
+					SpawnBonusItemForInterval (6);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 200 && Pills.playerOnePelletsConsumed < 220) {
+				if (!didSpawnBonusItem7_player1) {
+					didSpawnBonusItem7_player1 = true;
+					SpawnBonusItemForInterval (7);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 230 && Pills.playerOnePelletsConsumed < 250) {
+				if (!didSpawnBonusItem8_player1) {
+					didSpawnBonusItem8_player1 = true;
+					SpawnBonusItemForInterval (8);
+				    }
+                }
+			}
+		}
+
+
+    void SpawnBonusItemForInterval (int interval) {
+
+		GameObject bonusitem = null;
+
+		if (interval == 1) {
+			bonusitem = Resources.Load ("Prefabs/bonus_cherries", typeof (GameObject)) as GameObject;
+		} else if (interval == 2) {
+			bonusitem = Resources.Load ("Prefabs/bonus_strawberry", typeof (GameObject)) as GameObject;
+		} else if (interval == 3) {
+			bonusitem = Resources.Load ("Prefabs/bonus_peach", typeof (GameObject)) as GameObject;			
+		} else if (interval == 4) {
+			bonusitem = Resources.Load ("Prefabs/bonus_apple", typeof (GameObject)) as GameObject;
+		} else if (interval == 5) {
+			bonusitem = Resources.Load ("Prefabs/bonus_lemon", typeof (GameObject)) as GameObject;
+		} else if (interval == 6) {
+			bonusitem = Resources.Load ("Prefabs/bonus_galaxian", typeof (GameObject)) as GameObject;
+		} else if (interval == 7) {
+			bonusitem = Resources.Load ("Prefabs/bonus_bell", typeof (GameObject)) as GameObject;
+		} else if (interval == 8) {
+			bonusitem = Resources.Load ("Prefabs/bonus_key", typeof (GameObject)) as GameObject;
+		}
+        Instantiate (bonusitem);
+	}
+
+
+public void StartConsumedBonusItem (GameObject bonusItem, int scoreValue) {
+		Vector2 pos = bonusItem.transform.position;
+		Vector2 viewPortPoint = Camera.main.WorldToViewportPoint (pos);
+		// Destroy (bonusItem.gameObject);
+
+		StartCoroutine (ProcessConsumedBonusItem (0.75f));
+	}
+
+	IEnumerator ProcessConsumedBonusItem (float delay) {
+		yield return new WaitForSeconds (delay);
+
+	}
 }
 
       
