@@ -5,30 +5,28 @@ using UnityEngine.UI;
 
 
 public class BonusItem : MonoBehaviour
-
 {
     float randomLifeExpectancy;
 	float currentLifeTime;
 
 	// Use this for initialization
-	void Start () {
-
+	void Start () 
+		{
 		randomLifeExpectancy = Random.Range(9, 10);
 		this.name = "bonusItem";
-		GameObject.Find("Game").GetComponent <gameBoard> ().board [14, 13] = this.gameObject;
-		
-	}
+		GameObject.Find("Game").GetComponent<gameBoard>().board[10, 8] = this.gameObject;
+		}
 	
 	// Update is called once per frame
-	void Update () {
-
-		if (currentLifeTime < randomLifeExpectancy) {
+	void Update () 
+		{
+		if (currentLifeTime < randomLifeExpectancy) 
+			{
 			currentLifeTime += Time.deltaTime;
-		} else {
+			} else {
 			Destroy (this.gameObject);
+			}
 		}
-		
-	}
 
 
    /* public Sprite[] BonusItems;
@@ -50,7 +48,5 @@ public class BonusItem : MonoBehaviour
         
     }
 */
-
-
 
 }

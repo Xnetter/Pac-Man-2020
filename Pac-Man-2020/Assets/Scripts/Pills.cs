@@ -7,15 +7,10 @@ using UnityEngine.SceneManagement;
 public class Pills : MonoBehaviour
 {
     public static bool isOnePlayerGame = true;
-
 	public static int livesPlayerOne;
-	public static int livesPlayerTwo;
-
 	public static int playerOnePelletsConsumed = 0;
-	public static int playerTwoPelletsConsumed = 0;
 
     public bool isPortal;
-
     public bool isPellet;
     public bool isLargePellet;
     private bool consumed;

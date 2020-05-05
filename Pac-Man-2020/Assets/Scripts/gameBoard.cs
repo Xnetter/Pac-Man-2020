@@ -42,28 +42,23 @@ public class gameBoard : MonoBehaviour
 	public static int playerTwoLevel = 1;
     public int totalPellets = 0;
 	public static int playerOneScore = 0;
-	public static int playerTwoScore = 0;
     public static bool isPlayerOneUp = true;
-    public Image playerLives2;
-    public Image playerLives3;
-    public Text playerOneUp;
-	public Text playerOneScoreText;
-	public Text playerTwoScoreText;
-    public Text consumedGhostScoreText;
 
     //Array of type GameObject initialized with board width and height
     //These are the locations that will be stored
     //We are getting the positions of the game objects and then storing them at that position in this array.
     public GameObject[,] board = new GameObject[boardWidth, boardHeight];
 
-    public Image[] bonusImages;
 
-
+    //private bool didIncrementLevel = false;
     bool didSpawnBonusItem1_player1;
 	bool didSpawnBonusItem2_player1;
-	bool didSpawnBonusItem1_player2;
-	bool didSpawnBonusItem2_player2;
-
+    bool didSpawnBonusItem3_player1;
+	bool didSpawnBonusItem4_player1;
+    bool didSpawnBonusItem5_player1;
+	bool didSpawnBonusItem6_player1;
+    bool didSpawnBonusItem7_player1;
+	bool didSpawnBonusItem8_player1;
 
     private bool munch1 = true;
 
@@ -85,15 +80,15 @@ public class gameBoard : MonoBehaviour
             //Sanity check: we only want to store the objects in the array (pills, walls, etc.) not PacMan itself. 
             if (o.name != "Pac-Man-Node" && o.name != "Game" && o.name != "Maze" && o.name != "Pills" && o.name != "Nodes" && o.name != "Background" &&  o.name != "NonNodes" && o.name != "Overlay" && o.tag != "Ghost" && o.tag != "UI" && o.tag != "Base" && o.tag != "Sound" && o.name != "Canvas" && o.tag != "UIElements")
 			{
-               // if (o.GetComponent<Pills>() != null) {
-                //    if (o.GetComponent<Pills>().isPellet || o.GetComponent<Pills>().isLargePellet) {
-                //        totalPellets++;
-                //    }
-                //}
+                if (o.GetComponent<Pills>() != null) {
+                    if (o.GetComponent<Pills>().isPellet || o.GetComponent<Pills>().isLargePellet) {
+                        totalPellets++;
+                       }
+                }
                 //store the object o in the board array
-                Debug.Log("X: " + (int)pos.x + " Y: " + (int)pos.y + " " + o.name);
+                //Debug.Log("X: " + (int)pos.x + " Y: " + (int)pos.y + " " + o.name);
                 board[(int)pos.x, (int)pos.y] = o;
-                Debug.Log(board[(int)pos.x, (int)pos.y]);
+                //Debug.Log(board[(int)pos.x, (int)pos.y]);
 			} else
 			{
                 //just print this in case PacMan is found. 
@@ -295,12 +290,10 @@ public class gameBoard : MonoBehaviour
         }
     }
 
-    public void Update()
+    private void Update()
     {
-        UpdateUI();
-		// CheckPelletsConsumed ();
-		// CheckShouldBlink ();
 		BonusItems();
+
         if(LifeCount >= 3) {
             lifeAsset2.GetComponent<SpriteRenderer>().enabled = true;
             lifeAsset1.GetComponent<SpriteRenderer>().enabled = true;
@@ -324,148 +317,87 @@ public class gameBoard : MonoBehaviour
     }
 
 
-    	void BonusItems() {
-
-			SpawnBonusItemForPlayer (1);
-
-	}
+    void BonusItems() {
+		SpawnBonusItemForPlayer (1);
+                      }
 
 
     void SpawnBonusItemForPlayer (int playernum) {
 		if (playernum == 1) {
-			if (Pills.playerOnePelletsConsumed >= 70 && Pills.playerOnePelletsConsumed < 170) {
+			if (Pills.playerOnePelletsConsumed >= 20 && Pills.playerOnePelletsConsumed < 40) {
 				if (!didSpawnBonusItem1_player1) {
 					didSpawnBonusItem1_player1 = true;
-					SpawnBonusItemForLevel (playerOneLevel);
-				}
-			} else  if (Pills.playerOnePelletsConsumed >= 170) {
+					SpawnBonusItemForInterval (1);
+				    }
+			    } else if (Pills.playerOnePelletsConsumed >= 50 && Pills.playerOnePelletsConsumed < 70) {
 				if (!didSpawnBonusItem2_player1) {
 					didSpawnBonusItem2_player1 = true;
-					SpawnBonusItemForLevel (playerOneLevel);
-				}
-			}
-		} else {
-			if (Pills.playerTwoPelletsConsumed >= 70 && Pills.playerTwoPelletsConsumed < 170) {
-				if (!didSpawnBonusItem1_player2) {
-					didSpawnBonusItem1_player2 = true;
-					SpawnBonusItemForLevel (playerTwoLevel);
-				}
-			} else  if (Pills.playerTwoPelletsConsumed >= 170) {
-
-				if (!didSpawnBonusItem2_player2) {
-					didSpawnBonusItem2_player2 = true;
-					SpawnBonusItemForLevel (playerTwoLevel);
-				}
+					SpawnBonusItemForInterval (2);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 80 && Pills.playerOnePelletsConsumed < 100) {
+				if (!didSpawnBonusItem3_player1) {
+					didSpawnBonusItem3_player1 = true;
+					SpawnBonusItemForInterval (3);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 110 && Pills.playerOnePelletsConsumed < 130) {
+				if (!didSpawnBonusItem4_player1) {
+					didSpawnBonusItem4_player1 = true;
+					SpawnBonusItemForInterval (4);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 140 && Pills.playerOnePelletsConsumed < 160) {
+				if (!didSpawnBonusItem5_player1) {
+					didSpawnBonusItem5_player1 = true;
+					SpawnBonusItemForInterval (5);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 170 && Pills.playerOnePelletsConsumed < 190) {
+				if (!didSpawnBonusItem6_player1) {
+					didSpawnBonusItem6_player1 = true;
+					SpawnBonusItemForInterval (6);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 200 && Pills.playerOnePelletsConsumed < 220) {
+				if (!didSpawnBonusItem7_player1) {
+					didSpawnBonusItem7_player1 = true;
+					SpawnBonusItemForInterval (7);
+				    }
+                } else if (Pills.playerOnePelletsConsumed >= 230 && Pills.playerOnePelletsConsumed < 250) {
+				if (!didSpawnBonusItem8_player1) {
+					didSpawnBonusItem8_player1 = true;
+					SpawnBonusItemForInterval (8);
+				    }
+                }
 			}
 		}
-	}
 
 
-    void SpawnBonusItemForLevel (int level) {
+    void SpawnBonusItemForInterval (int interval) {
 
 		GameObject bonusitem = null;
 
-		if (level == 1) {
+		if (interval == 1) {
 			bonusitem = Resources.Load ("Prefabs/bonus_cherries", typeof (GameObject)) as GameObject;
-		} else if (level == 2) {
+		} else if (interval == 2) {
 			bonusitem = Resources.Load ("Prefabs/bonus_strawberry", typeof (GameObject)) as GameObject;
-		} else if (level == 3) {
+		} else if (interval == 3) {
 			bonusitem = Resources.Load ("Prefabs/bonus_peach", typeof (GameObject)) as GameObject;			
-		} else if (level == 4) {
-			bonusitem = Resources.Load ("Prefabs/bonus_peach", typeof (GameObject)) as GameObject;
-		} else if (level == 5) {
+		} else if (interval == 4) {
 			bonusitem = Resources.Load ("Prefabs/bonus_apple", typeof (GameObject)) as GameObject;
-		} else if (level == 6) {
-			bonusitem = Resources.Load ("Prefabs/bonus_apple", typeof (GameObject)) as GameObject;
-		} else if (level == 7) {
-			bonusitem = Resources.Load ("Prefabs/bonus_grapes", typeof (GameObject)) as GameObject;
-		} else if (level == 8) {
-			bonusitem = Resources.Load ("Prefabs/bonus_grapes", typeof (GameObject)) as GameObject;
-		} else if (level == 9) {
+		} else if (interval == 5) {
+			bonusitem = Resources.Load ("Prefabs/bonus_lemon", typeof (GameObject)) as GameObject;
+		} else if (interval == 6) {
 			bonusitem = Resources.Load ("Prefabs/bonus_galaxian", typeof (GameObject)) as GameObject;
-		} else if (level == 10) {
-			bonusitem = Resources.Load ("Prefabs/bonus_galaxian", typeof (GameObject)) as GameObject;
-		} else if (level == 11) {
+		} else if (interval == 7) {
 			bonusitem = Resources.Load ("Prefabs/bonus_bell", typeof (GameObject)) as GameObject;
-		} else if (level == 12) {
-			bonusitem = Resources.Load ("Prefabs/bonus_bell", typeof (GameObject)) as GameObject;
-		} else {
+		} else if (interval == 8) {
 			bonusitem = Resources.Load ("Prefabs/bonus_key", typeof (GameObject)) as GameObject;
 		}
-
-		Instantiate (bonusitem);
-	}
-
-
-
-    void UpdateUI () {
-		 // playerOneScoreText.text = playerOneScore.ToString ();
-		 // playerTwoScoreText.text = playerTwoScore.ToString ();
-
-		int currentLevel;
-        currentLevel = playerOneLevel;
-
-	/*	if (isPlayerOneUp) {
-			currentLevel = playerOneLevel;
-
-			if (Pills.livesPlayerOne == 3) {
-			 playerLives3.enabled = true;
-			 playerLives2.enabled = true;
-
-			} else if (Pills.livesPlayerOne == 2) {
-			 playerLives3.enabled = false;
-			 playerLives2.enabled = true;
-
-
-			} else if (Pills.livesPlayerOne == 1) {
-			 playerLives3.enabled = false;
-			 playerLives2.enabled = false;
-			}
-		} else {
-			currentLevel = playerTwoLevel;
-
-			if (Pills.livesPlayerTwo == 3) {
-			playerLives3.enabled = true;
-			playerLives2.enabled = true;
-
-			} else if (Pills.livesPlayerTwo == 2) {
-			playerLives3.enabled = false;
-			playerLives2.enabled = true;
-
-
-			} else if (Pills.livesPlayerTwo == 1) {
-			playerLives3.enabled = false;
-			playerLives2.enabled = false;
-			}
-		} */
-
-		for (int i = 0; i < bonusImages.Length; i++)
-		{
-			Image li = bonusImages[i];
-			li.enabled = false;
-		}
-
-		for (int i = 1; i < bonusImages.Length+1; i++)
-		{
-			if (currentLevel >= i) {
-				Image li = bonusImages[i-1];
-				li.enabled = true;
-			}
-		}
+        Instantiate (bonusitem);
 	}
 
 
 public void StartConsumedBonusItem (GameObject bonusItem, int scoreValue) {
 		Vector2 pos = bonusItem.transform.position;
 		Vector2 viewPortPoint = Camera.main.WorldToViewportPoint (pos);
-
-		// consumedGhostScoreText.GetComponent<RectTransform> ().anchorMin = viewPortPoint;
-		// consumedGhostScoreText.GetComponent<RectTransform> ().anchorMax = viewPortPoint;
-
-		// consumedGhostScoreText.text = scoreValue.ToString ();
-		// consumedGhostScoreText.GetComponent<Text> ().enabled = true;
-
-		Destroy (bonusItem.gameObject);
+		// Destroy (bonusItem.gameObject);
 
 		StartCoroutine (ProcessConsumedBonusItem (0.75f));
 	}
@@ -473,14 +405,7 @@ public void StartConsumedBonusItem (GameObject bonusItem, int scoreValue) {
 	IEnumerator ProcessConsumedBonusItem (float delay) {
 		yield return new WaitForSeconds (delay);
 
-		// consumedGhostScoreText.GetComponent<Text> ().enabled = false;
 	}
-
-
-
-
-
-
 }
 
       
