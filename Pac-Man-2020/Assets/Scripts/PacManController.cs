@@ -161,15 +161,15 @@ public class PacManController : ControllerNodes
                           }
                           GhostController.ScaredTimer = 0f;
                           GhostController.IsScared = true;
-                          gameBoard.playerOneScore += 50;
-                      } else {
-                           gameBoard.playerOneScore += 10;
-                           Pills.playerOnePelletsConsumed++;
-                                   }
-                             }
-                            if (tile.isBonusItem)
+                          gameBoard.points += 50;
+                      } else if (tile.isBonusItem) {
                                 ConsumedBonusItem(1, tile);
+                             } else {
+                           // gameBoard.points += 10;
+                           Pills.playerOnePelletsConsumed++;
+                                 } 
                              }
+                        }
 
 
 
@@ -192,7 +192,7 @@ public class PacManController : ControllerNodes
             {
                 if (playerNum == 1) 
                 {
-                    gameBoard.playerOneScore += bonusItem.pointValue;
+                    gameBoard.points += bonusItem.pointValue;
                 } 
                 GameObject.Find("Game").transform.GetComponent<gameBoard>().StartConsumedBonusItem(bonusItem.gameObject, bonusItem.pointValue); 
             } 
